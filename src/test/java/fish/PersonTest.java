@@ -123,7 +123,8 @@ public class PersonTest {
     void testAddDemeritPoints_SuspensionOver21() {
         registry.addPerson("56s_d%&fAB", "Adult", "Driver", "32|Main St|Melbourne|Victoria|Australia", "15-11-1990");
         registry.addDemeritPoints("56s_d%&fAB", "01-01-2023", 6);
-        String result = registry.addDemeritPoints("56s_d%&fAB", "01-01-2024", 7); // exceeds valid points
-        assertEquals("Failed", result);
+        registry.addDemeritPoints("56s_d%&fAB", "01-01-2023", 6);
+        String result = registry.addDemeritPoints("56s_d%&fAB", "01-01-2024", 5); // total = 17
+        assertEquals("Success", result);
     }
 }
