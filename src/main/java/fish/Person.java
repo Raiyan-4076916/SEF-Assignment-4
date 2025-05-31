@@ -165,4 +165,51 @@ public class Person {
     }
 
 
+// ---------------------- Helper Methods -----------------------
+
+    private boolean isValidPersonID(String id) {
+        if (id.length() != 10) return false;
+        if (!id.substring(0, 2).matches("[2-9]{2}")) return false;
+        if (!id.substring(2, 8).replaceAll("[^!@#$%^&*()_+=\\[\\]{};':\"\\\\|,.<>/?~-]", "").matches(".*[!@#$%^&*()_+=\\[\\]{};':\"\\\\|,.<>/?~-].*[!@#$%^&*()_+=\\[\\]{};':\"\\\\|,.<>/?~-].*")) return false;
+        return id.substring(8).matches("[A-Z]{2}");
+    }
+
+    private boolean isValidAddress(String address) {
+        String[] parts = address.split("\\|");
+        return parts.length == 5 && parts[3].equals("Victoria");
+    }
+
+    private boolean isValidDate(String date) {
+        try {
+            LocalDate.parse(date, DATE_FORMAT);
+            return true;
+        } catch (DateTimeParseException e) {
+            return false;
+        }
+    }
+
+    private List<PersonData> readAllPeople() {
+        List<PersonData> list = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                list.add(PersonData.fromString(line));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    private void writeAllPeople(List<PersonData> people) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, false))) {
+            for (PersonData p : people) {
+                writer.write(p.toString());
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
 
