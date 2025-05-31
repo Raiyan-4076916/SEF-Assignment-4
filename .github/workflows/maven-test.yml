@@ -1,0 +1,24 @@
+name: Run Maven Tests
+
+on:
+  push:
+    branches:
+      - main  # or your default branch name
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'  # Eclipse Temurin is a stable OpenJDK distribution
+        java-version: '21'       # Adjust this based on your Maven config
+
+    - name: Build and Run Tests with Maven
+      run: mvn -B clean test
