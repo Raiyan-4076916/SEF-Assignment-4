@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fish.PersonTest" time="0.3" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fish.PersonTest" time="0.347" tests="15" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
-    <property name="sun.java.command" value="C:\Users\HP\AppData\Local\Temp\surefire16417084642347839153\surefirebooter8774042432232529121.jar C:\Users\HP\AppData\Local\Temp\surefire16417084642347839153 2025-06-01T09-22-32_384-jvmRun1 surefire8582014551597051857tmp surefire_010851245048157912453tmp"/>
+    <property name="sun.java.command" value="C:\Users\HP\AppData\Local\Temp\surefire14975454786816942254\surefirebooter3529884491834318291.jar C:\Users\HP\AppData\Local\Temp\surefire14975454786816942254 2025-06-01T21-07-45_820-jvmRun1 surefire5867664921473828656tmp surefire_03409053905973456693tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\SEF 4\unit-testing\target\test-classes;D:\SEF 4\unit-testing\target\classes;C:\Users\HP\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\HP\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\HP\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\HP\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\HP\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\HP\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\HP\AppData\Local\Temp\surefire16417084642347839153\surefirebooter8774042432232529121.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\HP\AppData\Local\Temp\surefire14975454786816942254\surefirebooter3529884491834318291.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24.0.1+9-30"/>
@@ -58,19 +58,19 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="testAddPerson_InvalidAddressFormat" classname="fish.PersonTest" time="0.033"/>
-  <testcase name="testUpdatePersonalDetails_BirthdayChangeOnly" classname="fish.PersonTest" time="0.052"/>
-  <testcase name="testAddPerson_ValidData" classname="fish.PersonTest" time="0.037"/>
-  <testcase name="testUpdatePersonalDetails_ValidUpdate" classname="fish.PersonTest" time="0.027"/>
-  <testcase name="testUpdatePersonalDetails_AddressChangeUnder18" classname="fish.PersonTest" time="0.03"/>
-  <testcase name="testAddDemeritPoints_Valid" classname="fish.PersonTest" time="0.02"/>
+  <testcase name="testAddPerson_InvalidAddressFormat" classname="fish.PersonTest" time="0.053"/>
+  <testcase name="testUpdatePersonalDetails_BirthdayChangeOnly" classname="fish.PersonTest" time="0.123"/>
+  <testcase name="testAddPerson_ValidData" classname="fish.PersonTest" time="0.032"/>
+  <testcase name="testUpdatePersonalDetails_ValidUpdate" classname="fish.PersonTest" time="0.014"/>
+  <testcase name="testUpdatePersonalDetails_AddressChangeUnder18" classname="fish.PersonTest" time="0.014"/>
+  <testcase name="testAddDemeritPoints_Valid" classname="fish.PersonTest" time="0.011"/>
   <testcase name="testAddPerson_InvalidPersonID" classname="fish.PersonTest" time="0"/>
-  <testcase name="testAddDemeritPoints_InvalidPoints" classname="fish.PersonTest" time="0.023"/>
-  <testcase name="testAddDemeritPoints_SuspensionUnder21" classname="fish.PersonTest" time="0.015"/>
+  <testcase name="testAddDemeritPoints_InvalidPoints" classname="fish.PersonTest" time="0.017"/>
+  <testcase name="testAddDemeritPoints_SuspensionUnder21" classname="fish.PersonTest" time="0.013"/>
   <testcase name="testAddPerson_InvalidBirthdate" classname="fish.PersonTest" time="0"/>
-  <testcase name="testUpdatePersonalDetails_BirthdayAndOtherFieldsChanged" classname="fish.PersonTest" time="0.01"/>
-  <testcase name="testAddPerson_DuplicateID" classname="fish.PersonTest" time="0.008"/>
+  <testcase name="testUpdatePersonalDetails_BirthdayAndOtherFieldsChanged" classname="fish.PersonTest" time="0.009"/>
+  <testcase name="testAddPerson_DuplicateID" classname="fish.PersonTest" time="0.01"/>
   <testcase name="testAddDemeritPoints_InvalidDateFormat" classname="fish.PersonTest" time="0.009"/>
   <testcase name="testUpdatePersonalDetails_IDChangeNotAllowed" classname="fish.PersonTest" time="0.008"/>
-  <testcase name="testAddDemeritPoints_SuspensionOver21" classname="fish.PersonTest" time="0.008"/>
+  <testcase name="testAddDemeritPoints_SuspensionOver21" classname="fish.PersonTest" time="0.012"/>
 </testsuite>
